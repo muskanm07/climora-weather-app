@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body{
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  background: #0f172a;
+  font-family: 'Poppins', sans-serif;
+   padding: 1rem;
+  box-sizing: border-box;
+}
+.weatherCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  width: 90%;
+  max-width:30rem;
+  min-height: 10rem;
+  border-radius: 2rem;
+  color: #e2e8f0;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+
+
+}
+input{
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  width: 20rem;
+  border-radius: .5rem;
+  padding: 0.5rem;
+ 
+}
+
+button{
+ 
+  width: 6rem;
+  border: 1px solid #0f172a;
+  margin-top:4rem ;
+  padding: 0.6rem;
+  border-radius: .5rem;
+ background: #38bdf8;
+ color: white;
+ margin-left: .5rem;
+}
+h2{
+  font-size: 2rem;
+}
+p{
+  font-size:1rem ;
+ margin: .5rem;
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  height: 60px;
+  width: 60px;
+  border-top: 5px solid #38bdf8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.errorHandling{
+  color: #e2e8f0;
+  text-align: center;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@media(max-width:600px){
+  .weatherCard{
+    width: 85%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    height: auto;
+    
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+  h2{
+  font-size: 1rem;
+  }
+     input{
+      margin-top: 3rem;
+      width: 94%;
+      font-size: 1rem;
+  }
+
+  button{
+    
+    width: 100%;
+    margin-top: 1rem;
+    margin-left:0;
+    font-size: .9rem;
+    
+  }
+  p{
+  font-size:.8rem ;
+ margin: .3rem;
+}
+
+  
+}
+
