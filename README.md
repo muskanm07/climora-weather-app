@@ -13,4 +13,7 @@
 - giving premium styling
 - use of router
 
+## DEMO
+<img width="1867" height="872" alt="image" src="https://github.com/user-attachments/assets/4969c27b-2659-4e8a-a6c6-ce1b0ebe0a7b" />
+<img width="1877" height="868" alt="image" src="https://github.com/user-attachments/assets/4ef3b550-64ef-4205-8719-341ee039b8c8" />
 
