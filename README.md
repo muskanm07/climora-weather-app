@@ -1,16 +1,19 @@
-# React + Vite
+# real time weather app with smooth animation with good UI and UX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- real Time Weather app which contains temprature wind speed humidity and city and country 
+- it tells weather and shows video according to the weather 
+- Good UI
+- Dynamic weather videos
+- Responsive design
+- I used Error Handling and Loading state for good user experience
 
-Currently, two official plugins are available:
+---
+# future improvement
+- To make multi web page app
+- giving premium styling
+- use of router
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## DEMO
+<img width="1867" height="872" alt="image" src="https://github.com/user-attachments/assets/4969c27b-2659-4e8a-a6c6-ce1b0ebe0a7b" />
+<img width="1877" height="868" alt="image" src="https://github.com/user-attachments/assets/4ef3b550-64ef-4205-8719-341ee039b8c8" />
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
