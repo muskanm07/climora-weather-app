@@ -6,6 +6,7 @@
 - Dynamic weather videos
 - Responsive design
 - I used Error Handling and Loading state for good user experience
+- Used Recent Searches of Cities for Users
 
 ---
 # future improvement
