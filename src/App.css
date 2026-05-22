@@ -20,12 +20,13 @@ body{
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.2);
   width: 90%;
-  max-width:30rem;
-  min-height: 10rem;
+  max-width:20rem;
+  max-height:30rem;
+  
   border-radius: 2rem;
   color: #e2e8f0;
-  margin-top: 3rem;
-  padding: 1.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 
 
@@ -34,10 +35,10 @@ input{
   background: rgba(255,255,255,0.15);
   color: white;
   border: 1px solid rgba(255,255,255,0.2);
-
   width: 20rem;
   border-radius: .5rem;
   padding: 0.5rem;
+  
  
 }
 
@@ -54,10 +55,34 @@ button{
 }
 h2{
   font-size: 2rem;
+  padding-bottom: 0;
+  color: #e2e8f0;
+  text-align: center;
 }
 p{
   font-size:1rem ;
- margin: .5rem;
+ margin: .2rem;
+ color: #e2e8f0;
+}
+.LoginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  width: 20rem;
+  border-radius: .5rem;
+  padding: 2rem;
+
+}
+.login{
+  width: 20rem;
+  margin-top: 1rem;
+   background: rgba(49, 49, 49, 0.15);
+
+  
 }
 .loading{
   display: flex;

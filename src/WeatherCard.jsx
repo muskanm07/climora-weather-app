@@ -32,8 +32,8 @@ console.log(getWeatherVideo(city.weather[0].main))
             muted
              preload="auto"
             style={{
-              height:"300px",
-              width:"300px",
+              height:"12rem",
+              width:"18rem",
               objectFit:"cover",
               borderRadius:"12px"
             }} >
