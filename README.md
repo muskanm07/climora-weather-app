@@ -7,6 +7,7 @@
 - Responsive design
 - I used Error Handling and Loading state for good user experience
 - Used Recent Searches of Cities for Users
+- made login form for user before searching weather
 
 ---
 # future improvement
