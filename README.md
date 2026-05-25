@@ -74,6 +74,4 @@ Add your project screenshots here.
 
 Muskan Maurya
 
-```
-<img width="1877" height="868" alt="image" src="https://github.com/user-attachments/assets/4ef3b550-64ef-4205-8719-341ee039b8c8" />
 
