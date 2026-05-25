@@ -1,12 +1,17 @@
-import clearVideo from "./assets/4196175-hd_1920_1080_30fps.mp4"
-import cloudVideo from "./assets/5930986-hd_1920_1080_30fps.mp4"
-import rainVideo from "./assets/20351897-hd_720_1280_30fps.mp4"
-import haze from "./assets/15024250_1080_1920_24fps.mp4"
+
+
+import clearVideo from "../assets/4196175-hd_1920_1080_30fps.mp4"
+import cloudVideo from "../assets/5930986-hd_1920_1080_30fps.mp4"
+import rainVideo from "../assets/20351897-hd_720_1280_30fps.mp4"
+import haze from "../assets/15024250_1080_1920_24fps.mp4"
+
 
 export default function WeatherCard({city}){
+       
       if (!city) return null;
-      const getWeatherVideo=(condition)=>{
-     
+
+
+   const getWeatherVideo=(condition)=>{
   if(condition.toLowerCase().includes("rain"))
     return rainVideo
   if(condition.toLowerCase().includes("haze"))
@@ -18,11 +23,12 @@ export default function WeatherCard({city}){
   if(condition.toLowerCase().includes("cloud"))
     return cloudVideo
   return cloudVideo
+ }
 
-console.log(getWeatherVideo(city.weather[0].main))
-      }
+      
     return(
-        <div className="weatherCard">
+      
+       <div className="weatherCard">
             <h2>{city.name}, {city.sys.country}</h2> 
              <p>{city.weather[0].description}</p> 
             <video 
@@ -49,5 +55,6 @@ console.log(getWeatherVideo(city.weather[0].main))
             <p>Wind: {city.wind.speed} m/s</p>
           
           </div>
+         
     )
 }

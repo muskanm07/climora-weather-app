@@ -1,4 +1,6 @@
+
 export default function SearchBar({search,setSearch,handleSearch}){
+
 
     return(
         <form  onSubmit={handleSearch}  className="searchBar">
