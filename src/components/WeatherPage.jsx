@@ -7,7 +7,6 @@ import SearchBar from "./SearchBar"
 import WeatherCard from "./WeatherCard"
 import Profile from "../pages/Profile"
 
-
 export default function WeatherPage(){
        const [search ,setSearch]=useState("")
        const [recentSearch,setRecentSearch]=useState([])
@@ -30,7 +29,7 @@ export default function WeatherPage(){
          setError("")
          setLoading(true)
         
-        const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=c0d29462f76f6c518c3d86e01238ba06&units=metric`)
+        const response=await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${search}&appid=c0d29462f76f6c518c3d86e01238ba06&units=metric`)
         const data=await response.json()
          if(data.cod!=200){
             setError("city not found")
@@ -90,13 +89,14 @@ export default function WeatherPage(){
                     <>
              <SearchBar search={search} 
               setSearch={setSearch} 
-              handleSearch={handleSearch}/>
+              handleSearch={handleSearch} />
               {/* <RecentSearches recentSearch={recentSearch}/> */}
 
-              {city?.weather && <WeatherCard city={city}/>}
-              <Profile username={username} LogOut={LogOut} recentSearch={recentSearch}/>
+              {city && <WeatherCard city={city} />}
+              {/* <Profile username={username} LogOut={LogOut} recentSearch={recentSearch}/> */}
               </>
                   )}
+                
             {loading && <Loading/>}
             {error && <ErrorHandling error={error}/>}
                

@@ -71,7 +71,7 @@ li{
 }
 .weatherCard{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.12);
@@ -83,11 +83,34 @@ li{
   
   border-radius: 2rem;
   color: #e2e8f0;
-  margin-top: 1rem;
+  margin: 1rem auto;
   padding: 1rem;
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 
 
+}
+.forecast-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+}
+ .five-days-forecast{
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 1rem;
+ min-width: 14rem;
+  min-height: 13rem;
+  margin-top: 2rem;
+ 
+  
+
+} 
+.forecast-days{
+ text-align: center;
 }
 input{
   background: rgba(255,255,255,0.15);
@@ -96,6 +119,7 @@ input{
   width: 20rem;
   border-radius: .5rem;
   padding: 0.5rem;
+  margin: 1rem auto;
   
  
 }
