@@ -1,11 +1,11 @@
 import { useState } from "react"
-import LoginForm from "../pages/Login"
-import ErrorHandling from "./ErrorHandling"
-import Loading from "./Loading"
-import RecentSearches from "./RecentSearches"
-import SearchBar from "./SearchBar"
-import WeatherCard from "./WeatherCard"
-import Profile from "../pages/Profile"
+import LoginForm from "./Login"
+import ErrorHandling from "../components/ErrorHandling"
+import Loading from "../components/Loading"
+import RecentSearches from "../components/RecentSearches"
+import SearchBar from "../components/SearchBar"
+import WeatherCard from "../components/WeatherCard"
+import Profile from "./Profile"
 
 export default function WeatherPage(){
        const [search ,setSearch]=useState("")

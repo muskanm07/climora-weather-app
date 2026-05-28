@@ -10,6 +10,7 @@ export default function WeatherCard({city}){
        
       if (!city) return null;
      const currentWeather=city.list[0]
+    
 
    const getWeatherVideo=(condition)=>{
   if(condition.toLowerCase().includes("rain"))
@@ -23,32 +24,14 @@ export default function WeatherCard({city}){
   if(condition.toLowerCase().includes("cloud"))
     return cloudVideo
   return cloudVideo
-  //  if(condition.toLowerCase().includes("drizzle"))
-  //   return rainVideo
-  //  if(condition.toLowerCase().includes("rain"))
-  //   return rainVideo
-  // if(condition.toLowerCase().includes("thunderstorm"))
-  //   return rainVideo
-
-  // if(condition.toLowerCase().includes("haze"))
-  //   return haze
-
-  // if(condition.toLowerCase().includes("mist"))
-  //   return haze
-
-  // if(condition.toLowerCase().includes("fog"))
-  //   return haze
-
-  // if(condition.toLowerCase().includes("clear"))
-  //   return clearVideo
-
-  // if(condition.toLowerCase().includes("cloud"))
-  //   return cloudVideo
-
-  // return cloudVideo
+  
 }
-
-
+   console.log(city.list)
+ console.log(
+  city.list.map(
+    (item) => item.weather[0].description
+  )
+)
 
       
     return(
@@ -56,26 +39,25 @@ export default function WeatherCard({city}){
        <div className="weatherCard">
         <div className="weather-main">
             <h2>{city.city.name}, {city.city.country}</h2> 
-             <p>{currentWeather.weather[0].description}</p> 
+             <h3> {Math.round(currentWeather.main.temp)}°C</h3>
+            
             <video 
-              key={currentWeather.weather[0].description}
+             key={currentWeather.weather[0].description}
             autoPlay
             loop
             muted
              preload="auto"
             style={{
-              height:"12rem",
-              width:"18rem",
+              height:"11rem",
+              width:"14rem",
               objectFit:"cover",
               borderRadius:"12px"
             }} >
-               <source
-    src={getWeatherVideo(currentWeather.weather[0].description)}
-    type="video/mp4"
-  />
+              <source src={getWeatherVideo(currentWeather.weather[0].description)} type="video/mp4" />
+  
   </video>
+             <p>{currentWeather.weather[0].description}</p> 
             <p>Feels Like: {Math.round(currentWeather.main.feels_like)}°C</p>
-            <p>Min: {Math.round(currentWeather.main.temp_min)}°C</p>
             <p>Max: {Math.round(currentWeather.main.temp_max)}°C</p>
             <p>Humidity: {currentWeather.main.humidity}%</p>
             <p>Wind: {currentWeather.wind.speed} m/s</p>
@@ -97,9 +79,10 @@ export default function WeatherCard({city}){
             month:"short",
             day:"numeric"
            })}</p>
+            
            <p className="forecast">{Math.round(item.main.temp)}°C</p>
            <video 
-              key={item.weather[0].main}
+              key={item.weather[0].description}
             autoPlay
             loop
             muted
@@ -110,12 +93,10 @@ export default function WeatherCard({city}){
               objectFit:"cover",
               borderRadius:"12px"
             }} >
-               <source
-    src={getWeatherVideo(item.weather[0].description)}
-    type="video/mp4"
-  />
+              <source src={getWeatherVideo(item.weather[0].description)} type="video/mp4" />
   </video>
-            <p className="forecast">{item.weather[0].description}</p>
+  <p className="forecast">{item.weather[0].description}</p>
+           
             </div>
             </div>
            

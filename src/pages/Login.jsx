@@ -2,7 +2,8 @@ export default function LoginForm({username,setUserName,password,setPassWord,han
    
 
     return(
-        <>
+       
+        <div className="form">
       <h2>Please Login</h2>
       <form onSubmit={handleFormSubmit} className="LoginForm">
       <input type="text" 
@@ -17,9 +18,10 @@ export default function LoginForm({username,setUserName,password,setPassWord,han
       placeholder="password"
       className="login"/>
       {errors.password && <p>{errors.password}</p> }
-      <button type="submit">Log In</button>
+      <button type="submit" className="login-btn">Log In</button>
    </form>
-   </>
+   </div>
+   
 
     )
 }

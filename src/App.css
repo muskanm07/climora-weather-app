@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 body{
-  display: flex;
-  justify-content:center ;
-  align-items: center;
+  
   min-height: 100vh;
   background: #0f172a;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+   
 }
 .home{
  display: flex;
@@ -24,8 +23,8 @@ body{
 .navbar{
   display: inline-block;
   background-color: #38bdf8;
- min-width: 80rem;
-  max-height: 10rem;
+  min-width: 30rem;
+  min-height: 20rem;
    border: 1px solid #e2e8f0;
   margin-bottom: 5rem;
    padding: 2rem 0; 
@@ -79,7 +78,8 @@ li{
   border: 1px solid rgba(255,255,255,0.2);
   width: 90%;
   max-width:20rem;
-  max-height:30rem;
+ 
+  height: auto;
   
   border-radius: 2rem;
   color: #e2e8f0;
@@ -88,6 +88,10 @@ li{
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 
 
+}
+.weather-main{
+  text-align: center;
+ 
 }
 .forecast-container{
   display: flex;
@@ -102,49 +106,71 @@ li{
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 1rem;
- min-width: 14rem;
-  min-height: 13rem;
+ min-width: 11rem;
+  min-height: 10rem;
   margin-top: 2rem;
+ 
  
   
 
 } 
 .forecast-days{
  text-align: center;
+ padding-top: 1rem;
 }
-input{
+.searchBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1rem;
+  margin-left:4rem;
+ 
+}
+ input{
+  
   background: rgba(255,255,255,0.15);
   color: white;
   border: 1px solid rgba(255,255,255,0.2);
-  width: 20rem;
+  width: 22rem;
   border-radius: .5rem;
   padding: 0.5rem;
-  margin: 1rem auto;
+
+
   
  
-}
+} 
 
-button{
+ button{
  
   width: 6rem;
   border: 1px solid #0f172a;
-  margin-top:4rem ;
   padding: 0.6rem;
   border-radius: .5rem;
- background: #38bdf8;
- color: white;
- margin-left: .5rem;
-}
+  background: #38bdf8;
+  color: white;
+ 
+} 
 h2{
   font-size: 2rem;
-  padding-bottom: 0;
   color: #e2e8f0;
   text-align: center;
 }
+h3{
+font-weight: 900;
+
+}
 p{
-  font-size:1rem ;
- margin: .2rem;
+  font-size:.8rem ;
+ margin: .1rem;
  color: #e2e8f0;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 .LoginForm{
   display: flex;
@@ -154,17 +180,24 @@ p{
   background: rgba(255,255,255,0.15);
   color: white;
   border: 1px solid rgba(255,255,255,0.2);
-  width: 20rem;
+  min-width:16rem ;
+  min-height: 13rem;
   border-radius: .5rem;
+ 
   padding: 2rem;
 
 }
+
 .login{
   width: 20rem;
   margin-top: 1rem;
    background: rgba(49, 49, 49, 0.15);
 
   
+}
+.login-btn{
+ margin-top: 1rem;
+ min-width: 14rem;
 }
 .loading{
   display: flex;
@@ -255,7 +288,7 @@ p{
   font-size: 1rem;
   }
      input{
-      margin-top: 3rem;
+      margin: 3rem auto;
       width: 94%;
       font-size: 1rem;
   }
