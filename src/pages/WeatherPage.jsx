@@ -90,12 +90,12 @@ export default function WeatherPage(){
              <SearchBar search={search} 
               setSearch={setSearch} 
               handleSearch={handleSearch} />
-              {/* <RecentSearches recentSearch={recentSearch}/> */}
+              
 
               {city && <WeatherCard city={city} />}
-              {/* <Profile username={username} LogOut={LogOut} recentSearch={recentSearch}/> */}
               </>
                   )}
+              
                 
             {loading && <Loading/>}
             {error && <ErrorHandling error={error}/>}

@@ -1,8 +1,7 @@
 
+export default function RecentSearches({ recentSearch = [] }) {
 
-import { getWeather } from "../services/weatherApi"
-export default function RecentSearches({recentSearch}){
-     
+
      
     return(
          <>

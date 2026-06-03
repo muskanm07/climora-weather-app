@@ -9,10 +9,7 @@ export default function Profile({username,LogOut,recentSearch}){
      <div className="profile-page">
      
         <div className="user-info">
-           {/* {username.map((item,idx)=>(
-        <h4 key={idx}>{item}</h4>
            
-            ))} */}
             <h4>{username}</h4>
           <p>muskan@GMAIL.COM</p>
           <p>Raebareli</p>

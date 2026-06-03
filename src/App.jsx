@@ -17,8 +17,8 @@ function App() {
             element={<HomePage/>}/>
             <Route path='/weatherpage'
             element={<WeatherPage/>}/>
-       {/* <Route path='/profile'
-            element={<Profile/>}/> */}
+         <Route path='/profile'
+         element={<Profile/>}/>
            
           </Routes>
       </>
