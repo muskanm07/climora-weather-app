@@ -85,10 +85,10 @@ export default function WeatherCard({city}){
      .slice(0,5)
       .map((item) => (
           
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-3 text-white text-center min-w-[90px] flex flex-col items-center gap-1" key={item.dt}>
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-3 text-white text-center min-w-[90px]" key={item.dt}>
              {/* {item.dt_txt} */}
-             <div className="bg-white/10 rounded-xl p-3 text-center min-w-[70px] text-xs">
-           <p className="text-us opacity-70">{new Date(item.dt_txt).toLocaleDateString("en-US",{
+             
+           <p className="text-xs opacity-70">{new Date(item.dt_txt).toLocaleDateString("en-US",{
             weekday:"short",
             month:"short",
             day:"numeric"
@@ -107,7 +107,7 @@ export default function WeatherCard({city}){
   <p className="text-xs opacity-70 capitalize">{item.weather[0].description}</p>
            
             </div>
-            </div>
+            
           
            
      ))}

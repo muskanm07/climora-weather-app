@@ -1,6 +1,6 @@
 
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
+// import './App.css'
 import WeatherPage from './pages/WeatherPage'
 import HomePage from './pages/Home'
 import Profile from './pages/Profile'
@@ -21,6 +21,8 @@ function App() {
          element={<Profile/>}/>
            
           </Routes>
+          
+          
       </>
   )
 }
