@@ -1,5 +1,4 @@
 
-
 import clearVideo from "../assets/4196175-hd_1920_1080_30fps.mp4"
 import cloudVideo from "../assets/5930986-hd_1920_1080_30fps.mp4"
 import rainVideo from "../assets/20351897-hd_720_1280_30fps.mp4"
@@ -7,7 +6,9 @@ import haze from "../assets/15024250_1080_1920_24fps.mp4"
 
 
 export default function WeatherCard({city}){
-       
+      
+      
+
       if (!city) return null;
      const currentWeather=city.list[0]
     

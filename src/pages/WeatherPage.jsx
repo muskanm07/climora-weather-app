@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+ import { useSearchParams } from 'react-router-dom'
 import LoginForm from "./Login"
 import ErrorHandling from "../components/ErrorHandling"
 import Loading from "../components/Loading"
@@ -12,94 +13,55 @@ export default function WeatherPage(){
        const [recentSearch,setRecentSearch]=useState([])
        const [loading,setLoading]=useState(false)
        const [error,setError]=useState("")
-       const [city,setCity]=useState(null)
+       const [data, setData] = useState(null)
+       const [searchParams] = useSearchParams()
+       const city = searchParams.get('city')
+      
      
-       const [isLoggedIn,setIsLoggedIn]=useState(false)
-       const [logOut,setLogOut]=useState(false)
-       const [username,setUserName]=useState("")
-       const [password,setPassWord]=useState("")
-       const [loginError,setLogInError]=useState({})
-       const handleSearch=async(e)=>{
-        e.preventDefault()
-       if(!search.trim()){
-        setError("please enter city name")
+      useEffect(()=>{
+       const handleSearch=async()=>{
+       
+        if(!city){
         return
        }
+     
         try{
          setError("")
          setLoading(true)
-        
-        const response=await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${search}&appid=c0d29462f76f6c518c3d86e01238ba06&units=metric`)
+        const response=await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=c0d29462f76f6c518c3d86e01238ba06&units=metric`)
         const data=await response.json()
          if(data.cod!=200){
             setError("city not found")
-            setCity(null)
+            setData(null)
             setSearch("")
          }else{
             setRecentSearch(prev=>[search,...prev].slice(0,5))
-            setCity(data)
+            setData(data)
             setSearch("")
          }
         }catch(e){
             setError("something went wrong")
         } finally{
             setLoading(false)
-        }
-
-       }
-
-       const handleFormSubmit=(e)=>{
-       e.preventDefault()
-       const errors={}
-       if(!username.trim()){
-       
-       errors.username="please enter username"
-       
-       }
-       if(!password.trim()){
-         errors.password="please enter password"
-      }
-       if(Object.keys(errors).length>0){
-         setLogInError(errors)
-         return
-       }
-          setLogInError({})
-          setIsLoggedIn(true)
-          setUserName(username)
-          setPassWord("")
-         localStorage.setItem("username",username)
-      
-    }
-    const LogOut =()=>{
-       setLogOut(true)
-        alert("do yo want to log out")
-    }
-   
+        }  
+     }
+      handleSearch()
+   },[city])
     return(
-        <>
-         { 
-               !isLoggedIn ?(<LoginForm 
-                 username={username}
-                 setUserName={setUserName}
-                 password={password}
-                 setPassWord={setPassWord} 
-                 handleFormSubmit={handleFormSubmit} 
-                 errors={loginError}
-                  />):(
-                    <>
+       
+       
+            <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] flex flex-col items-center justify-start pt-24 p-6 gap-6">
              <SearchBar search={search} 
               setSearch={setSearch} 
-              handleSearch={handleSearch} />
+              
+             />
               
 
-              {city && <WeatherCard city={city} />}
-              </>
-                  )}
-              
+            {data && <WeatherCard city={data} />}
                 
             {loading && <Loading/>}
             {error && <ErrorHandling error={error}/>}
-               
-      </>
+             </div>  
+      
     )
 }

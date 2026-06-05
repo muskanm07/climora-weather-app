@@ -1,27 +1,17 @@
 import RecentSearches from "../components/RecentSearches";
 
 
-export default function Profile({username,LogOut,recentSearch}){
+export default function Profile({recentSearch}){
     
     return(
 
      
-     <div className="profile-page">
-     
-        <div className="user-info">
-           
-            <h4>{username}</h4>
-          <p>muskan@GMAIL.COM</p>
-          <p>Raebareli</p>
-       
+  <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] flex flex-col items-center justify-start p-6 gap-6">
+      <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-white w-full max-w-sm shadow-xl">
+         <RecentSearches recentSearch={recentSearch}/>hi
       </div>
-      <div className="recent-search-card">
-         <RecentSearches recentSearch={recentSearch}/>
-      </div>
-      <div className="favourites-card"></div>
-      <div className="setting-card">
-        <button onClick={LogOut}>Log out</button>
-      </div>
+      <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-white w-full max-w-sm shadow-xl">paris</div>
+      
      </div>
     
 
