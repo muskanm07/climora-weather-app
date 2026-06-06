@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
  import { useSearchParams } from 'react-router-dom'
-import LoginForm from "./Login"
+
 import ErrorHandling from "../components/ErrorHandling"
 import Loading from "../components/Loading"
 import RecentSearches from "../components/RecentSearches"
@@ -8,13 +8,14 @@ import SearchBar from "../components/SearchBar"
 import WeatherCard from "../components/WeatherCard"
 import Profile from "./Profile"
 
-export default function WeatherPage(){
+export default function WeatherPage({recentSearch,setRecentSearch}){
        const [search ,setSearch]=useState("")
-       const [recentSearch,setRecentSearch]=useState([])
+      
        const [loading,setLoading]=useState(false)
        const [error,setError]=useState("")
        const [data, setData] = useState(null)
        const [searchParams] = useSearchParams()
+      
        const city = searchParams.get('city')
       
      
@@ -24,7 +25,8 @@ export default function WeatherPage(){
         if(!city){
         return
        }
-     
+   
+
         try{
          setError("")
          setLoading(true)
@@ -52,9 +54,10 @@ export default function WeatherPage(){
        
             <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] flex flex-col items-center justify-start pt-24 p-6 gap-6">
              <SearchBar search={search} 
-              setSearch={setSearch} 
+             setSearch={setSearch}
               
              />
+            
               
 
             {data && <WeatherCard city={data} />}

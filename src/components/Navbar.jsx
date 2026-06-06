@@ -16,11 +16,7 @@ export default function NavBar(){
                                
 
                  </li>
-                   <li>
-                                <Link to="/login">Log In</Link>
-                               
-
-                 </li>
+                 
                     <li>
                                   <Link to="/weatherpage">Dashboard</Link>
         

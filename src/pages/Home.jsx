@@ -7,10 +7,9 @@ export default function HomePage(){
         const [search, setSearch] = useState("")
 
     return(
-          
-        <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] flex flex-col items-center justify-start pt-24 p-6 gap-6">
-          
-       
+          <>
+         
+        <div className="sm:max-w-2xl sm:mx-auto min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a5f]  flex flex-col items-center justify-start  gap-6">
         <SearchBar search={search} setSearch={setSearch}/>
         <main className="flex flex-col pt-8">
             
@@ -18,5 +17,6 @@ export default function HomePage(){
             <h3 className="text-white font-medium text-center text-2xl pt-4">where you can search weather in your own space</h3>
         </main>
         </div>
+        </>
     )
 }
