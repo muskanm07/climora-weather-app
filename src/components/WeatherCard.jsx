@@ -37,7 +37,7 @@ export default function WeatherCard({city}){
       
     return(
       <>
-       <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] flex flex-col items-center justify-start p-6 gap-6">
+       <div className="w-full bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] flex flex-col items-center justify-start p-6 gap-6">
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-white w-full max-w-sm shadow-xl">
            
             <h2 className="text-2xl font-bold text-center">{city.city.name}, {city.city.country}</h2> 

@@ -1,10 +1,9 @@
 
 import { Route, Routes ,Navigate} from 'react-router-dom'
 import { useState } from 'react'
-
-// import './App.css'
+import './App.css'
 import NavBar from './components/Navbar'
-import WeatherPage from './pages/WeatherPage'
+import DashBoard from './pages/Dashboard'
 import HomePage from './pages/Home'
 import Profile from './pages/Profile'
 import AboutUs from './pages/AboutUs';
@@ -13,7 +12,11 @@ import AboutUs from './pages/AboutUs';
 
 function App() {
   
-     const [recentSearch,setRecentSearch]=useState([])
+     const [recentSearch,setRecentSearch]=useState(() => {
+  const saved = localStorage.getItem('recentSearch')
+  return saved ? JSON.parse(saved) : []
+})
+
  
           
   return (
@@ -28,8 +31,8 @@ function App() {
             
 
            
-            <Route path='/weatherpage'
-            element={<WeatherPage recentSearch={recentSearch} setRecentSearch={setRecentSearch}/>}/>
+            <Route path='/dashboard'
+            element={<DashBoard recentSearch={recentSearch} setRecentSearch={setRecentSearch}/>}/>
          <Route path='/profile'
          element={<Profile recentSearch={recentSearch}/>}/>
            

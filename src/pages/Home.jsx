@@ -9,12 +9,12 @@ export default function HomePage(){
     return(
           <>
          
-        <div className="sm:max-w-2xl sm:mx-auto min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a5f]  flex flex-col items-center justify-start  gap-6">
+        <div className="p-4 min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a5f]  flex flex-col items-center justify-start  pt-24 gap-6">
         <SearchBar search={search} setSearch={setSearch}/>
         <main className="flex flex-col pt-8">
             
-            <h2 className="text-cyan-500 text-center font-bold text-4xl">WELCOME TO CLIMORA</h2>
-            <h3 className="text-white font-medium text-center text-2xl pt-4">where you can search weather in your own space</h3>
+            <h2 className="text-cyan-500 text-center font-bold text-2xl md:text-5xl ">WELCOME TO CLIMORA</h2>
+            <h3 className="text-white font-medium text-center text-xl px-8 pt-4 md:text-3xl">Fast, accurate, and beautiful weather updates powered by real-time data.</h3>
         </main>
         </div>
         </>
