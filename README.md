@@ -1,77 +1,34 @@
-# Real Time Weather App
+# Climora 🌤️
 
-A responsive real-time weather application built using React.  
-Users can search for any city and view live weather information with a clean UI and dynamic weather visuals.
+A real-time weather web app built with React. Search any city and get current weather conditions, a 5-day forecast, and dynamic video backgrounds that match the weather.
 
-## Features
 
-- Real-time weather data
-- Search weather by city
-- Dynamic weather cards
-- Recent search history
-- Loading and error handling
-- Responsive UI
-- Video backgrounds based on weather conditions
-- Login/Signup UI
+## ✨ Features
+- Real-time weather data by city search
+- 5-day forecast
+- Dynamic video backgrounds (rain, clear, cloudy, haze)
+- Responsive design
+- Recent searches saved to profile
 
-## Tech Stack
-
+## 🛠️ Tech Stack
 - React
-- JavaScript
-- CSS
-- Weather API
+- Tailwind CSS
+- React Router
+- OpenWeatherMap API
 
-## Project Structure
-
-```bash
-src/
- ├── components/
- ├── pages/
- ├── assets/
- ├── services/
- └── App.jsx
-```
-
-## Installation
-
-Clone the repository:
+## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/muskanm07/real-time-weather-app.git
-```
-
-Move into the project folder:
-
-```bash
-cd real-time-weather-app
-```
-
-Install dependencies:
-
-```bash
+git clone https://github.com/muskanm07/climora.git
+cd climora
 npm install
-```
-
-Start the development server:
-
-```bash
 npm run dev
 ```
 
-## Screenshots
+## 👩‍💻 Developer
+Built by Muskan — frontend developer & dancer based in India.
+Currently open to frontend opportunities.
 
-Add your project screenshots here.
-
-## Future Improvements
-
-- Add 5-day weather forecast
-- Add dark/light mode
-- Add geolocation support
-- Improve profile section
-- Save favorite cities
-
-## Author
-
-Muskan Maurya
-
+- GitHub: [@muskanm07](https://github.com/muskanm07)
+- LinkedIn: [Muskan Maurya](https://www.linkedin.com/in/muskan-maurya-1344202b2/)
 
