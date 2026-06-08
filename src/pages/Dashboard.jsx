@@ -58,13 +58,13 @@ export default function DashBoard({recentSearch,setRecentSearch}){
 
     return(
        
-            <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] flex flex-col items-center justify-start pt-24 p-6 gap-6">
+            <div className="min-h-screen bg-gradient-to-br from-[#ff8177] to-[#b12a5b] flex flex-col items-center justify-start pt-24 p-6 gap-6">
              <SearchBar search={search} 
              setSearch={setSearch}
               
              />
             
-              
+             
 
             {data && <WeatherCard city={data} />}
                 

@@ -37,11 +37,11 @@ export default function WeatherCard({city}){
       
     return(
       <>
-       <div className="w-full bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] flex flex-col items-center justify-start p-6 gap-6">
-        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-white w-full max-w-sm shadow-xl">
+       <div className="w-full md:max-w-[500px] bg-black/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 flex flex-col items-center justify-start gap-6 hover:shadow-2xl hover:shadow-grey-900 hover:-translate-y-2 transition-all duration-200 lg:max-w-[700px]">
+        <div className="bg-white/15 backdrop-blur-md rounded-3xl p-6 text-white w-full shadow-xl">
            
-            <h2 className="text-2xl font-bold text-center">{city.city.name}, {city.city.country}</h2> 
-             <h3 className="text-7xl font-black text-center my-3"> {Math.round(currentWeather.main.temp)}°C</h3>
+            <h2 className="text-xl md:text-2xl font-bold text-center">{city.city.name}, {city.city.country}</h2> 
+             <h3 className="text-3xl my-0 md:text-7xl font-black text-center my-3"> {Math.round(currentWeather.main.temp)}°C</h3>
             <div className=" flex justify-center my-3">
             <video 
            
@@ -50,7 +50,7 @@ export default function WeatherCard({city}){
             loop
             muted
              preload="auto"
-             className="h-44 w-56 object-cover rounded-2xl"
+             className="w-full h-64 md:h-44 w-50 object-cover rounded-2xl lg:h-60 w-20"
             >
               <source src={getWeatherVideo(currentWeather.weather[0].description)} type="video/mp4" />
   
@@ -79,7 +79,7 @@ export default function WeatherCard({city}){
           </div>
           
          
-           <div className="flex gap-3 overflow-x-auto w-full max-w-sm pb-2">
+           <div className="flex gap-5 overflow-x-auto w-full pb-2">
            
           {city.list
      .filter((item) => item.dt_txt.includes("12:00:00"))
@@ -102,7 +102,7 @@ export default function WeatherCard({city}){
             loop
             muted
              preload="auto"
-             className="h-12 w-14 object-cover rounded-lg" >
+             className="w-96 md:h-12 w-16 object-cover rounded-lg" >
               <source src={getWeatherVideo(item.weather[0].description)} type="video/mp4" />
   </video>
   <p className="text-xs opacity-70 capitalize">{item.weather[0].description}</p>
