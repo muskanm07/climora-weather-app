@@ -23,7 +23,7 @@ export default function DashBoard({recentSearch,setRecentSearch}){
      
       useEffect(()=>{
        const handleSearch=async()=>{
-       
+        
         if(!city){
         return
        }
@@ -32,7 +32,7 @@ export default function DashBoard({recentSearch,setRecentSearch}){
         try{
          setError("")
          setLoading(true)
-        const response=await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=c0d29462f76f6c518c3d86e01238ba06&units=metric`)
+        const response=await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`)
         const data=await response.json()
          if(data.cod!=200){
             setError("city not found")
