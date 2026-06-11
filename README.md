@@ -2,7 +2,7 @@
 
 A full-featured React weather app with a dreamy glassmorphism UI, dynamic video backgrounds, and real-time weather data.
 
-**[Live Demo](https://your-climora-link.vercel.app)** • **[GitHub](https://github.com/your-username/climora)**
+**[Live Demo](https://climora-by-muskan.netlify.app/)** • **[GitHub](https://github.com/muskanm07/climora-weather-app)**
 
 ---
 
