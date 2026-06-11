@@ -1,74 +1,91 @@
-# 🌤️ Climora
+# 🌤️ Climora — Weather Explorer
 
-Climora is a modern weather application built with React and Tailwind CSS. It provides real-time weather information, a 5-day forecast, and dynamic visuals that change based on current weather conditions.
+A full-featured React weather app with a dreamy glassmorphism UI, dynamic video backgrounds, and real-time weather data.
 
-## Features
+**[Live Demo](https://your-climora-link.vercel.app)** • **[GitHub](https://github.com/your-username/climora)**
 
-* 🔍 Search weather by city name
-* 🌡️ Real-time temperature and weather conditions
-* 📅 5-day weather forecast
-* 🎥 Dynamic weather videos for different conditions
-* 💨 Weather details including humidity, wind speed, feels-like temperature, and maximum temperature
-* 🎨 Modern glassmorphism UI
-* 📱 Fully responsive design for mobile, tablet, and desktop
+---
 
-## Tech Stack
+## ✨ Features
 
-* React
-* Tailwind CSS
-* React Router
-* OpenWeatherMap API
+- 🔍 **City Search** — URL-based search using `useNavigate` + `useSearchParams` so searches are shareable and browser back/forward works correctly
+- 📅 **5-Day Forecast** — Powered by OpenWeatherMap Forecast API with async/await, error handling, and loading states
+- 🎥 **Dynamic Video Backgrounds** — Dashboard background changes based on live weather conditions
+- 💾 **Recent Search History** — Persisted via localStorage, lifted to `App.jsx` for cross-route sharing
+- 👤 **Profile Page** — Personalised user profile page
+- ℹ️ **About Us Page** — Project info and credits
+- 📱 **Fully Responsive** — Mobile-first design, works on all screen sizes
+- 🎨 **Glassmorphism UI** — Dreamy brand cyan palette with dark purple gradient
 
-## Screenshots
+---
 
-Add screenshots of your application here.
+## 🛠️ Tech Stack
 
-## Installation
+| Technology | Usage |
+|---|---|
+| React.js | Frontend framework |
+| Tailwind CSS (v3) | Styling |
+| React Router | Multi-page routing |
+| OpenWeatherMap API | Weather data |
+| Vite | Build tool |
+| Vercel | Deployment |
 
-1. Clone the repository
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/        # Reusable UI components
+├── pages/
+│   ├── Home.jsx       # /home - Landing/search page
+│   ├── Dashboard.jsx  # /dashboard - Weather display with video bg
+│   ├── Profile.jsx    # /profile - User profile
+│   └── AboutUs.jsx    # /aboutus - About page
+├── App.jsx            # Root component, state lifting, routing
+└── main.jsx           # Entry point
+```
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# Clone the repo
 git clone https://github.com/your-username/climora.git
-```
 
-2. Navigate to the project folder
-
-```bash
+# Install dependencies
 cd climora
-```
-
-3. Install dependencies
-
-```bash
 npm install
-```
 
-4. Start the development server
+# Add your OpenWeatherMap API key
+# Create .env file in root:
+VITE_WEATHER_API_KEY=your_api_key_here
 
-```bash
+# Start dev server
 npm run dev
 ```
 
-## Environment Variables
+---
 
-Create a `.env` file and add your OpenWeatherMap API key:
+## 🔑 Environment Variables
 
-```env
-VITE_WEATHER_API_KEY=your_api_key_here
+```
+VITE_WEATHER_API_KEY=your_openweathermap_api_key
 ```
 
-## Future Improvements
+Get a free API key at [openweathermap.org](https://openweathermap.org/api)
 
-* Weather by current location
-* Hourly forecast
-* Dark/Light mode
-* Weather alerts
-* Favorite cities
+---
 
+## 👩‍💻 Author
 
-## Author
+**Muskan Maurya**  
+Frontend Developer · React.js · JavaScript  
+[LinkedIn](https://linkedin.com/in/your-profile) • [GitHub](https://github.com/your-username)
 
-**Muskan Maurya**
+---
 
-Frontend Developer passionate about creating clean, responsive, and user-friendly web applications.
+## 📄 License
 
+MIT License
